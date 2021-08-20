@@ -33,7 +33,7 @@ document.getElementById('case-down').addEventListener('click', function () {
 
 function updateSsdCase(product, isIncreasing) {
     const caseInput = document.getElementById(product + '-ssd');
-    const caseNumber = caseInput.innerText;
+    let caseNumber = caseInput.innerText;
     if (isIncreasing) {
         caseInput.innerText = parseInt(caseNumber) - 100 + 280;
     }
