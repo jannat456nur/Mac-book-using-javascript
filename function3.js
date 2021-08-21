@@ -12,8 +12,27 @@ function updateGbCase(product, isIncreasing) {
     caseInput.innerText = caseNumber;
     //update total
 
-    // calculateTotal();
     // const caseTotal = document.getElementById('total');
+    // if (isIncreasing == true && caseNumber < 1) {
+
+    //     caseTotal.innerText = parseInt(caseNumber) + 1299 + 180;
+    // }
+    // else if (caseNumber > 0 && isIncreasing == false) {
+    //     caseTotal.innerText = parseInt(caseNumber) + 1299 - 180;
+    // }
+    // // calculateTotal();
+    // const balanceTotal = document.getElementById('total');
+    // const balanceTotalText = balanceTotal.innerText;
+    // const previousblanceTotal = parseInt(balanceTotalText);
+    // balanceTotal.innerText = previousblanceTotal + parseInt(caseNumber);
+
+    // const balanceTotal = document.getElementById('total');
+    // const balanceTotalText = balanceTotal.innerText;
+    // const previousblanceTotal = parseInt(balanceTotalText);
+    // balanceTotal.innerText = previousblanceTotal - parseInt(caseNumber);
+
+    // const caseTotal = document.getElementById('total');
+
     // if (isIncreasing == true && caseNumber < 1) {
 
     //     caseTotal.innerText = parseInt(caseNumber) + 180 + 1299;
@@ -23,6 +42,15 @@ function updateGbCase(product, isIncreasing) {
     // }
 
 
+
+    const caseTotal = document.getElementById('total');
+    if (isIncreasing == true && caseNumber < 1) {
+
+        caseTotal.innerText = parseInt(caseNumber) + 1299 + 20;
+    }
+    else if (caseNumber > 0 && isIncreasing == false) {
+        caseTotal.innerText = parseInt(caseNumber) + 1299 - 20;
+    }
 }
 //function nislm oise na
 
@@ -69,6 +97,10 @@ function updateSsdCase(product, isIncreasing) {
     caseInput.innerText = caseNumber;
 
     //update total
+    // const balanceTotal = document.getElementById('total');
+    // const balanceTotalText = balanceTotal.innerText;
+    // const previousblanceTotal = parseInt(balanceTotalText);
+    // balanceTotal.innerText = previousblanceTotal + parseInt(caseNumber);
 
     // const caseTotal = document.getElementById('total');
     // if (isIncreasing == true && caseNumber < 1) {
@@ -110,14 +142,14 @@ function updateDeliveryCase(product, isIncreasing) {
     }
 
     // update total
-    // const caseTotal = document.getElementById('total');
-    // if (isIncreasing == true && caseNumber < 1) {
+    const caseTotal = document.getElementById('total');
+    if (isIncreasing == true && caseNumber < 1) {
 
-    //     caseTotal.innerText = parseInt(caseNumber) + 1299 + 20;
-    // }
-    // else if (caseNumber > 0) {
-    //     caseTotal.innerText = parseInt(caseNumber) + 1299 - 20;
-    // }
+        caseTotal.innerText = parseInt(caseNumber) + 1299 + 20;
+    }
+    else if (caseNumber > 0 && isIncreasing == false) {
+        caseTotal.innerText = parseInt(caseNumber) + 1299 - 20;
+    }
 }
 //for delivery cost 25 aug
 document.getElementById('25-aug').addEventListener('click', function () {

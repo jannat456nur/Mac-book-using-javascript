@@ -6,7 +6,7 @@ function updateGbCase(product, isIncreasing) {
     }
     //error**********
 
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseInput.innerText = parseInt(caseNumber) - 180;
     }
     //update total
@@ -15,7 +15,7 @@ function updateGbCase(product, isIncreasing) {
 
         caseTotal.innerText = parseInt(caseNumber) + 180 + 1299;
     }
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseTotal.innerText = parseInt(caseNumber) + 1299 - 180;
     }
 
@@ -34,19 +34,19 @@ document.getElementById('case-down').addEventListener('click', function () {
 function updateSsdCase(product, isIncreasing) {
     const caseInput = document.getElementById(product + '-ssd');
     let caseNumber = caseInput.innerText;
-    if (isIncreasing) {
+    if (caseNumber <= 1 && isIncreasing == true) {
         caseInput.innerText = parseInt(caseNumber) - 100 + 280;
     }
-    else {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseInput.innerText = parseInt(caseNumber) - 180;
     }
     //update total
     const caseTotal = document.getElementById('total');
-    if (isIncreasing == true && caseNumber < 1) {
+    if (isIncreasing == true && caseNumber <= 1) {
 
         caseTotal.innerText = parseInt(caseNumber) + 180 + 1299;
     }
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseTotal.innerText = parseInt(caseNumber) + 1299 - 180;
     }
 }
@@ -70,19 +70,19 @@ document.getElementById('memory-1TB').addEventListener('click', function () {
 function updateDeliveryCase(product, isIncreasing) {
     const caseInput = document.getElementById(product + '-delivery');
     const caseNumber = caseInput.innerText;
-    if (isIncreasing == true) {
+    if (isIncreasing == true && caseNumber <= 1) {
         caseInput.innerText = parseInt(caseNumber) + 20;
     }
-    else {
+    else if (isIncreasing == false && caseNumber > 0) {
         caseInput.innerText = parseInt(caseNumber) - 20;
     }
     //update total
     const caseTotal = document.getElementById('total');
-    if (isIncreasing == true && caseNumber < 1) {
+    if (isIncreasing == true && caseNumber <= 1) {
 
         caseTotal.innerText = parseInt(caseNumber) + 1299 + 20;
     }
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseTotal.innerText = parseInt(caseNumber) + 1299 - 20;
     }
 }
