@@ -4,13 +4,15 @@ function updateGbCase(product, isIncreasing) {
     if (caseNumber <= 1 && isIncreasing == true) {
         caseNumber = parseInt(caseNumber) + 180;
     }
-    //error**********
+    //solved
 
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseNumber = parseInt(caseNumber) - 180;
     }
-    //update total
     caseInput.innerText = caseNumber;
+    //update total
+
+    // calculateTotal();
     // const caseTotal = document.getElementById('total');
     // if (isIncreasing == true && caseNumber < 1) {
 
@@ -20,7 +22,26 @@ function updateGbCase(product, isIncreasing) {
     //     caseTotal.innerText = parseInt(caseNumber) + 1299 - 180;
     // }
 
+
 }
+//function nislm oise na
+
+// function getInput(product) {
+//     const productInput = document.getElementById(product + '-value');
+//     const productNumber = parseIn(productInput.innerText);
+//     return productNumber;
+// }
+
+// function calculateTotal() {
+
+//     const inputtotal = getInput('input') * 180;
+//     const caseTotal = getInput('case') * 180;
+//     const deliveryTotal = getInput('case') * 20;
+//     const subTotal = inputtotal + caseTotal + deliveryTotal;
+//     console.log(subTotal);
+
+// }
+
 
 document.getElementById('case-up').addEventListener('click', function () {
     updateGbCase('input', true)
@@ -38,11 +59,17 @@ function updateSsdCase(product, isIncreasing) {
     if (caseNumber <= 1 && isIncreasing == true) {
         caseNumber = parseInt(caseNumber) - 100 + 280;
     }
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseNumber = parseInt(caseNumber) - 180;
     }
-    //update total
+    // else if (caseNumber <= 1 && isIncreasing == false) {
+    //     caseNumber = parseInt(caseNumber) + 100;
+    // }
+
     caseInput.innerText = caseNumber;
+
+    //update total
+
     // const caseTotal = document.getElementById('total');
     // if (isIncreasing == true && caseNumber < 1) {
 
@@ -63,7 +90,7 @@ document.getElementById('memory-256').addEventListener('click', function () {
 //for ssd 521
 document.getElementById('memory-512').addEventListener('click', function () {
 
-    // updateSsdCase('case', false)
+    updateSsdCase('case', false)
     //error ********
 });
 //for ssd 1TB
@@ -78,10 +105,11 @@ function updateDeliveryCase(product, isIncreasing) {
     if (isIncreasing == true && caseNumber < 1) {
         caseInput.innerText = parseInt(caseNumber) + 20;
     }
-    else if (caseNumber > 0) {
+    else if (caseNumber > 0 && isIncreasing == false) {
         caseInput.innerText = parseInt(caseNumber) - 20;
     }
-    //update total
+
+    // update total
     // const caseTotal = document.getElementById('total');
     // if (isIncreasing == true && caseNumber < 1) {
 
